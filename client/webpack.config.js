@@ -23,7 +23,7 @@ module.exports = () => {
       //Webpack plugin that generates our htm file and insers our bundles. 
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Text Editor'
+        title: 'Just Another Text Editor'
       }),
 
       //Injects our custome service worker
@@ -35,8 +35,8 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        title: 'Text Editor',
-        short_name: 'Editor',
+        title: 'Just Another Text Editor',
+        short_name: 'Jate',
         description: 'A quick way to check and edit your text.',
         background_color: '#225ca3',
         theme_color: '#225ca3',
@@ -66,7 +66,7 @@ module.exports = () => {
             loader: 'babel-laoder',
             options:{
               presets: ['@babel/preset-env'],
-              plugins: ['@babel/transform-runtime'],
+              plugins: ['@babel/proposal-object-rest-spread, @babel/transform-runtime'],
             },
           },
         },
