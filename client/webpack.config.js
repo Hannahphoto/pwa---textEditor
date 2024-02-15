@@ -64,7 +64,10 @@ module.exports = () => {
         },
         //Use babel-loader in order to use ES6
         {
-          use:{
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          use:
+          {
             loader: 'babel-loader',
             options:{
               presets: ['@babel/preset-env'],
