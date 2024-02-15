@@ -50,6 +50,8 @@ module.exports = () => {
           },
         ],
       }),
+
+     
     ],
 
     //Add Babel to webpack.
@@ -57,16 +59,16 @@ module.exports = () => {
       //Add CSS loaders
       rules: [
         {
-          tests: /\.css$/i,
+          test: /\.css$/i,
           use: ['style-loader', 'css-loader']
         },
         //Use babel-loader in order to use ES6
         {
           use:{
-            loader: 'babel-laoder',
+            loader: 'babel-loader',
             options:{
               presets: ['@babel/preset-env'],
-              plugins: ['@babel/proposal-object-rest-spread, @babel/transform-runtime'],
+              plugins: ['@babel/proposal-object-rest-spread', '@babel/transform-runtime'],
             },
           },
         },
