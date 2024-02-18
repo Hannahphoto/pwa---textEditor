@@ -35,11 +35,11 @@ THEN I should have proper build scripts for a webpack application
 ```
 
 ## Git Hub
+https://github.com/Hannahphoto/pwa---textEditor
+
 
 ## Deployed Site
 https://text-editor-web-application-6i87.onrender.com/
-
-## Screenshot
 
 <div align="center">
     <img src="./client/images/Jate App.png.png" href = "Screenshot of JATE app." />
