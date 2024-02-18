@@ -16,7 +16,7 @@ const initdb = async () =>
 
 //Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) =>{
-  console.error('putDb not implemented');
+
 
   //Create a connection to the database
   const jateDb = await openDB('jate', 1);
@@ -28,7 +28,7 @@ export const putDb = async (content) =>{
   const store = tx.objectStore('jate');
 
   //Use the .add() method on the stoer and pass in the content
-  const request = store.add({content: content})
+  const request = store.put({id: 1, value: content});
 
   //Get confirmation of the request
   const result = await request;
@@ -38,7 +38,7 @@ export const putDb = async (content) =>{
 
 //Add logic for a method that gets all the content from the database
 export const getDb = async () => {
-  console.error('getDb not implemented');
+
 
   //Create a connection to the database
   const jateDb = await openDB('jate', 1);
@@ -50,12 +50,12 @@ export const getDb = async () => {
   const store = tx.objectStore('jate');
 
   //use the .getAll() method to get all the data in the database
-  const request = store.getAll()
+  const request = store.get(1);
 
   //get confirmation of the request
   const result = await request;
-  console.log('result.value', result);
-  return result;
+  console.log('result.value', result?.value);  //might need if statement//? if there is no .value, dont crash
+  return result?.value;
 };
 
 initdb();
