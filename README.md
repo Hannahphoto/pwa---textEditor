@@ -33,3 +33,14 @@ THEN I should have my static assets pre cached upon loading along with subsequen
 WHEN I deploy to Render
 THEN I should have proper build scripts for a webpack application
 ```
+
+## Git Hub
+
+## Deployed Site
+https://text-editor-web-application-6i87.onrender.com/
+
+## Screenshot
+
+<div align="center">
+    <img src="./client/images/Jate App.png.png" href = "Screenshot of JATE app." />
+    </div>
